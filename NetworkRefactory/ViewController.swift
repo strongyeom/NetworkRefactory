@@ -11,7 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NetworkBasic.shared.randomRequest { response in
+            switch response {
+            case .success(let success):
+                dump(success)
+            case .failure(let failure):
+                print(failure.description)
+            }
+        }
     }
 
 
