@@ -31,6 +31,42 @@ enum StatusError: Int, Error, LocalizedError {
 
 
 
+enum BeerAPI {
+    
+    private var baseURL: String {
+        return "https://api.punkapi.com/v2/beers"
+    }
+    
+    case all
+    case single(id: Int)
+    case random
+    
+    var endPoint: URL {
+        switch self {
+        case .all:
+            return URL(string: baseURL)!
+        case .single(let id):
+            return URL(string: baseURL + "\(id)")!
+        case .random:
+            return URL(string: baseURL + "/random")!
+        }
+    }
+   
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 
 class NetworkBasic {
@@ -39,9 +75,10 @@ class NetworkBasic {
     private init() { }
     
     func fetchRequest(completionHandler: @escaping((Result<[Beer],StatusError>) -> Void)) {
-        let url = URL(string: "https://api.punkapi.com/v2/beers")!
         
-        AF.request(url).responseDecodable(of: [Beer].self) { response in
+        let api = BeerAPI.all
+        
+        AF.request(api.endPoint).responseDecodable(of: [Beer].self) { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))
@@ -54,9 +91,10 @@ class NetworkBasic {
     }
     
     func randomRequest(completionHandler: @escaping((Result<[Beer],StatusError>) -> Void)) {
-        let url = URL(string: "https://api.punkapi.com/v2/beers/random")!
         
-        AF.request(url).responseDecodable(of: [Beer].self) { response in
+        let api = BeerAPI.random
+        
+        AF.request(api.endPoint).responseDecodable(of: [Beer].self) { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))
@@ -68,10 +106,10 @@ class NetworkBasic {
         }
     }
     
-    func singleRequest(completionHandler: @escaping((Result<[Beer],StatusError>) -> Void)) {
-        let url = URL(string: "https://api.punkapi.com/v2/beers/1")!
+    func singleRequest(id: Int,completionHandler: @escaping((Result<[Beer],StatusError>) -> Void)) {
+        let api = BeerAPI.single(id: id)
         
-        AF.request(url).responseDecodable(of: [Beer].self) { response in
+        AF.request(api.endPoint).responseDecodable(of: [Beer].self) { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))
