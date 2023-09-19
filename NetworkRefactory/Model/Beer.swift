@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Beer
-struct Beer: Codable {
+struct Beer: Decodable {
     let id: Int
     let name, description: String
     let imageURL: String

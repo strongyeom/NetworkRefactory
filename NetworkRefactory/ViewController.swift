@@ -11,7 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkBasic.shared.randomRequest { response in
+        
+        Network.shared.request(type: [Beer].self, api: .single(id: 1)) { response in
             switch response {
             case .success(let success):
                 dump(success)
@@ -19,8 +20,7 @@ class ViewController: UIViewController {
                 print(failure.description)
             }
         }
+       
     }
-
-
 }
 

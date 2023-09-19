@@ -29,46 +29,6 @@ enum StatusError: Int, Error, LocalizedError {
     }
 }
 
-
-
-enum BeerAPI {
-    
-    private var baseURL: String {
-        return "https://api.punkapi.com/v2/beers"
-    }
-    
-    case all
-    case single(id: Int)
-    case random
-    
-    var endPoint: URL {
-        switch self {
-        case .all:
-            return URL(string: baseURL)!
-        case .single(let id):
-            return URL(string: baseURL + "\(id)")!
-        case .random:
-            return URL(string: baseURL + "/random")!
-        }
-    }
-   
-    
-    
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
 class NetworkBasic {
     static let shared = NetworkBasic()
     
@@ -78,7 +38,7 @@ class NetworkBasic {
         
         let api = BeerAPI.all
         
-        AF.request(api.endPoint).responseDecodable(of: [Beer].self) { response in
+        AF.request(api.endPoint, method: api.mathod).responseDecodable(of: [Beer].self) { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))
@@ -94,7 +54,7 @@ class NetworkBasic {
         
         let api = BeerAPI.random
         
-        AF.request(api.endPoint).responseDecodable(of: [Beer].self) { response in
+        AF.request(api.endPoint, method: api.mathod).responseDecodable(of: [Beer].self) { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))
@@ -109,7 +69,7 @@ class NetworkBasic {
     func singleRequest(id: Int,completionHandler: @escaping((Result<[Beer],StatusError>) -> Void)) {
         let api = BeerAPI.single(id: id)
         
-        AF.request(api.endPoint).responseDecodable(of: [Beer].self) { response in
+        AF.request(api.endPoint, method: api.mathod).responseDecodable(of: [Beer].self) { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))

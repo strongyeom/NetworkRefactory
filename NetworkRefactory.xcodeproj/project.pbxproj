@@ -16,6 +16,8 @@
 		2677A7A22AB993F900DE4DBD /* NetworkBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677A7A12AB993F900DE4DBD /* NetworkBasic.swift */; };
 		2677A7A52AB9955B00DE4DBD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2677A7A42AB9955B00DE4DBD /* Alamofire */; };
 		2677A7A82AB995A600DE4DBD /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677A7A72AB995A600DE4DBD /* Beer.swift */; };
+		2677A7AA2AB99FB900DE4DBD /* BeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677A7A92AB99FB900DE4DBD /* BeerAPI.swift */; };
+		2677A7AC2AB99FCE00DE4DBD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677A7AB2AB99FCE00DE4DBD /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		2677A7922AB9829B00DE4DBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2677A7A12AB993F900DE4DBD /* NetworkBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBasic.swift; sourceTree = "<group>"; };
 		2677A7A72AB995A600DE4DBD /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		2677A7A92AB99FB900DE4DBD /* BeerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAPI.swift; sourceTree = "<group>"; };
+		2677A7AB2AB99FCE00DE4DBD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				2677A7A12AB993F900DE4DBD /* NetworkBasic.swift */,
+				2677A7A92AB99FB900DE4DBD /* BeerAPI.swift */,
+				2677A7AB2AB99FCE00DE4DBD /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -170,8 +176,10 @@
 			files = (
 				2677A7892AB9829800DE4DBD /* ViewController.swift in Sources */,
 				2677A7A22AB993F900DE4DBD /* NetworkBasic.swift in Sources */,
+				2677A7AA2AB99FB900DE4DBD /* BeerAPI.swift in Sources */,
 				2677A7A82AB995A600DE4DBD /* Beer.swift in Sources */,
 				2677A7852AB9829800DE4DBD /* AppDelegate.swift in Sources */,
+				2677A7AC2AB99FCE00DE4DBD /* Network.swift in Sources */,
 				2677A7872AB9829800DE4DBD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
