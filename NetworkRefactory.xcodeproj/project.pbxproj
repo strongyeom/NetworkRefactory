@@ -26,6 +26,7 @@
 		26E773A52ABD915E00D72E60 /* PhotoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A42ABD915E00D72E60 /* PhotoAPIService.swift */; };
 		26E773A72ABD92ED00D72E60 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A62ABD92ED00D72E60 /* PhotoViewModel.swift */; };
 		26E773A92ABD9AC700D72E60 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A82ABD9AC700D72E60 /* PhotoCell.swift */; };
+		26E773AB2ABDA08D00D72E60 /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773AA2ABDA08D00D72E60 /* BeerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		26E773A42ABD915E00D72E60 /* PhotoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIService.swift; sourceTree = "<group>"; };
 		26E773A62ABD92ED00D72E60 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		26E773A82ABD9AC700D72E60 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		26E773AA2ABDA08D00D72E60 /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2677A7A72AB995A600DE4DBD /* Beer.swift */,
+				26E773AA2ABDA08D00D72E60 /* BeerViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				2677A7892AB9829800DE4DBD /* ViewController.swift in Sources */,
 				2677A7A22AB993F900DE4DBD /* NetworkBasic.swift in Sources */,
 				2677A7AA2AB99FB900DE4DBD /* BeerAPI.swift in Sources */,
+				26E773AB2ABDA08D00D72E60 /* BeerViewModel.swift in Sources */,
 				2677A7A82AB995A600DE4DBD /* Beer.swift in Sources */,
 				2677A7852AB9829800DE4DBD /* AppDelegate.swift in Sources */,
 				26E773A72ABD92ED00D72E60 /* PhotoViewModel.swift in Sources */,
