@@ -17,16 +17,5 @@ struct PhotoResult: Codable {
     let id: String
     let created_at: String
     let description: String?
-    let urls: PhotoURL
-    let links: PhotoLink
     let likes: Int
-}
-
-struct PhotoURL: Codable {
-    let full: String
-    let thumb: String
-}
-
-struct PhotoLink: Codable {
-    let html: String
 }

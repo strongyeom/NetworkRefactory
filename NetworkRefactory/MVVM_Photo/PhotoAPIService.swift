@@ -27,4 +27,18 @@ class PhotoAPIService {
                 }
             }
     }
+    
+    
+    func randomPhotosCallRequest(completionHandler: @escaping([PhotoResult]) -> Void) {
+        let url = URL(string: "https://api.unsplash.com/photos/random?client_id=R87kkJUhEVTR_QPQo8pQOj7Q7sgWnUP8gTE8h0yOHB0&count=10")!
+        AF.request(url)
+            .responseDecodable(of: [PhotoResult].self) { response in
+                switch response.result {
+                case .success(let data):
+                    completionHandler(data)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
 }
