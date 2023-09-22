@@ -21,6 +21,11 @@
 		26E773982ABD817500D72E60 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773972ABD817500D72E60 /* TextFieldViewController.swift */; };
 		26E7739B2ABD81DF00D72E60 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 26E7739A2ABD81DF00D72E60 /* SnapKit */; };
 		26E7739D2ABD836900D72E60 /* TextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7739C2ABD836900D72E60 /* TextFieldViewModel.swift */; };
+		26E773A12ABD8F9000D72E60 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A02ABD8F9000D72E60 /* PhotoViewController.swift */; };
+		26E773A32ABD8FC500D72E60 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A22ABD8FC500D72E60 /* Photo.swift */; };
+		26E773A52ABD915E00D72E60 /* PhotoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A42ABD915E00D72E60 /* PhotoAPIService.swift */; };
+		26E773A72ABD92ED00D72E60 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A62ABD92ED00D72E60 /* PhotoViewModel.swift */; };
+		26E773A92ABD9AC700D72E60 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E773A82ABD9AC700D72E60 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		26E773942ABD7EDB00D72E60 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		26E773972ABD817500D72E60 /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		26E7739C2ABD836900D72E60 /* TextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModel.swift; sourceTree = "<group>"; };
+		26E773A02ABD8F9000D72E60 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		26E773A22ABD8FC500D72E60 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		26E773A42ABD915E00D72E60 /* PhotoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIService.swift; sourceTree = "<group>"; };
+		26E773A62ABD92ED00D72E60 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		26E773A82ABD9AC700D72E60 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 		2677A7832AB9829800DE4DBD /* NetworkRefactory */ = {
 			isa = PBXGroup;
 			children = (
+				26E7739F2ABD8F7E00D72E60 /* MVVM_Photo */,
 				26E7739E2ABD85CF00D72E60 /* Observable */,
 				26E773962ABD813B00D72E60 /* MVVM_TextField */,
 				2677A7A62AB9959C00DE4DBD /* Model */,
@@ -119,6 +130,18 @@
 				26E773942ABD7EDB00D72E60 /* Observable.swift */,
 			);
 			path = Observable;
+			sourceTree = "<group>";
+		};
+		26E7739F2ABD8F7E00D72E60 /* MVVM_Photo */ = {
+			isa = PBXGroup;
+			children = (
+				26E773A02ABD8F9000D72E60 /* PhotoViewController.swift */,
+				26E773A42ABD915E00D72E60 /* PhotoAPIService.swift */,
+				26E773A22ABD8FC500D72E60 /* Photo.swift */,
+				26E773A62ABD92ED00D72E60 /* PhotoViewModel.swift */,
+				26E773A82ABD9AC700D72E60 /* PhotoCell.swift */,
+			);
+			path = MVVM_Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,16 +222,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E773A32ABD8FC500D72E60 /* Photo.swift in Sources */,
+				26E773A92ABD9AC700D72E60 /* PhotoCell.swift in Sources */,
 				26E7739D2ABD836900D72E60 /* TextFieldViewModel.swift in Sources */,
+				26E773A52ABD915E00D72E60 /* PhotoAPIService.swift in Sources */,
 				26E773952ABD7EDB00D72E60 /* Observable.swift in Sources */,
 				2677A7892AB9829800DE4DBD /* ViewController.swift in Sources */,
 				2677A7A22AB993F900DE4DBD /* NetworkBasic.swift in Sources */,
 				2677A7AA2AB99FB900DE4DBD /* BeerAPI.swift in Sources */,
 				2677A7A82AB995A600DE4DBD /* Beer.swift in Sources */,
 				2677A7852AB9829800DE4DBD /* AppDelegate.swift in Sources */,
+				26E773A72ABD92ED00D72E60 /* PhotoViewModel.swift in Sources */,
 				2677A7AC2AB99FCE00DE4DBD /* Network.swift in Sources */,
 				2677A7872AB9829800DE4DBD /* SceneDelegate.swift in Sources */,
 				26E773982ABD817500D72E60 /* TextFieldViewController.swift in Sources */,
+				26E773A12ABD8F9000D72E60 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
